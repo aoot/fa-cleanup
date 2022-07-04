@@ -11,6 +11,15 @@ from datetime import datetime
 import spacy
 
 def get_date_from_fa(fa_string):
+    '''Returning the portion of a date that does not match the current moment the function is executed.
+    
+    Args:
+        fa_string (str): A string that to parse for date information
+        
+    Returns:
+        (str) The portion of the date that does not match the current moment the function is executed; 
+        else returns nothing if ParserError.
+    '''
     try:
         date = parse(fa_string, fuzzy_with_tokens=True)[0]
 
@@ -23,12 +32,21 @@ def get_date_from_fa(fa_string):
         else:
             return date.strftime("%d %B %Y")
         return parse(fa_string, fuzzy_with_tokens=True)[0].strftime("%Y")
+
     except ParserError:
         return ""
     
     
 def get_names_from_fa(fa_string, nlp_model):
+    '''Using NLP model to parse names from a string.
+
+    Args: 
+        fa_string (str): A string to be parsed by the NLP model
+        nlp_model (spacy model): Instance of spacy object
     
+    Returns: 
+        (list): A list of names
+    '''
     doc = nlp_model(fa_string)
     entities = []
     labels = []
@@ -51,10 +69,10 @@ print(f"Looking in {path_to_routes}")
 files = os.listdir(path_to_routes)
 
 # Filter to just routes files (xx-routes.jsonlines)
-r_routes = re.compile("[a-z]{2}-routes.jsonlines")
+r_routes = re.compile("[a-z]{2}-routes.jsonlines")  # Compile a regular expression object
 
 # Iterate over generator returned by filter function
-for file in filter(r_routes.match, files):
+for file in filter(r_routes.match, files):  # regex object match function as the filtering function
 
     # Get absolute path to routes files
     path = os.path.join(path_to_routes, file)
@@ -73,7 +91,7 @@ for file in filter(r_routes.match, files):
             
             names = get_names_from_fa(route["fa"], nlp_model)
             date = get_date_from_fa(route["fa"])
-            print(f"{names=},{date=}\n")
+            print(f"{names},{date}\n")
 
             route_data[-1]["fa_2"] = [names, date]
 
