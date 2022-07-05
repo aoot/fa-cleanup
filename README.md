@@ -1,5 +1,5 @@
-### First-Ascenionist (FA) Data Cleanup Project
-
+## First-Ascenionist (FA) Data Cleanup Project
+---
 **TLDR; Parse existing FA data field and extract individual names, year, method of ascent (FA, FFA).**
 
 Early generations of first ascensionists  played a vital role in the history and development of climbing.  Unfortunately, records of their works, if available, exist as a short byline string (list of the individuals’ names and the year) in the current dataset in no particular format. 
@@ -9,7 +9,6 @@ Improving the quality of this metadata will not only enable efficient curation, 
 **A sample of existing FA data field in Red Rock Canyon, Nevada**
 - [**Levitation 29**](https://tacos.openbeta.io/climbs/18b3ec70-b1d8-590a-bdad-3bf26f4c143e)
   Jorge and Joanne Urioste/FFA: John Long, Lynn Hill & Joanne Urioste
-  
 - [**Crimson Chrysalis**](https://tacos.openbeta.io/climbs/28e8f602-f986-546c-917c-4d3d6ac0a2b4)
   Uriostes, 10/79
 - [**Spare Rib**](https://tacos.openbeta.io/climbs/bed58cf5-7abc-58cb-b562-2f28a574164e)
@@ -26,10 +25,15 @@ As you can see there are many inconsistencies:
 - P. Van Betten vs Paul Van Betten
 - J. Smith vs Jay Smith
 
-### How Can You Help?
-
+## How Can You Help?
+---
 We're looking for a project lead to take on this initiative.  Please email viet at openbeta.io.
 
-### Licenses
+## Licenses
+---
+Code: [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-Code: MIT, Data: CC0
+Data: [![License: CC0-1.0](https://licensebuttons.net/l/zero/1.0/80x15.png)](http://creativecommons.org/publicdomain/zero/1.0/)
+
+Database: [![License: ODbL](https://img.shields.io/badge/License-ODbL-brightgreen.svg)](https://opendatacommons.org/licenses/odbl/)
+
