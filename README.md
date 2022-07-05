@@ -1,5 +1,4 @@
 ## First-Ascenionist (FA) Data Cleanup Project
----
 **TLDR; Parse existing FA data field and extract individual names, year, method of ascent (FA, FFA).**
 
 Early generations of first ascensionists  played a vital role in the history and development of climbing.  Unfortunately, records of their works, if available, exist as a short byline string (list of the individuals’ names and the year) in the current dataset in no particular format. 
@@ -26,11 +25,9 @@ As you can see there are many inconsistencies:
 - J. Smith vs Jay Smith
 
 ## How Can You Help?
----
 We're looking for a project lead to take on this initiative.  Please email viet at openbeta.io.
 
 ## Licenses
----
 Code: [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 Data: [![License: CC0-1.0](https://licensebuttons.net/l/zero/1.0/80x15.png)](http://creativecommons.org/publicdomain/zero/1.0/)
